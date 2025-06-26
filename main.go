@@ -8,4 +8,6 @@ func main() {
 
 	fmt.Printf("My name is %s and I am %T years old.\n", name, age)
 	fmt.Printf("My name is %s and I am %T years old.\n", name, age)
+	fmt.Printf("My name is %s and I am %T years old.\n", name, age)
+
 }

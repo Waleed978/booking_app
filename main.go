@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	inter "booking_app/interface"
+	"fmt"
+)
 
 type Person struct {
 	id   string
@@ -12,14 +15,14 @@ func (p Person) getPerson() string {
 	return fmt.Sprintf("Person: %s, %s, %d", p.id, p.name, p.age)
 }
 
-// type Car struct {
-// 	model string
-// 	year  int
-// 	wheel struct {
-// 		width  int
-// 		height int
-// 	}
-// }
+//	type Car struct {
+//		model string
+//		year  int
+//		wheel struct {
+//			width  int
+//			height int
+//		}
+//	}
 type Car struct {
 	model string
 	year  int
@@ -62,6 +65,20 @@ func main() {
 	fmt.Printf("The sum of %d and %d is %d\n", 10, 20, sum)
 	fmt.Printf("The difference of %d and %d is %d\n", 10, 20, sub)
 
+	// Using the interface implementation
+	fmt.Println("\n--- Interface Examples ---")
+	inter.Test(
+		inter.BirthDay{
+			Date:  "1",
+			Month: "1",
+			Year:  "2000",
+		},
+	)
+	inter.Test(
+		inter.ReportMessage{
+			Report: "Report",
+		},
+	)
 }
 func addAndSub(a int, b int) (int, int) {
 	return a + b, a - b
